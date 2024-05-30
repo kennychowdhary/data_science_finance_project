@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}, "axis": {"labelFontSize": 12, "titleFontSize": 12}}, "layer": [{"mark": {"type": "rule", "size": 1}, "encoding": {"color": {"condition": {"test": "datum.open <= datum.close", "value": "#06982d"}, "value": "#ae1325"}, "x": {"axis": {"format": "%H:%M", "labelAngle": -80}, "field": "Datetime", "title": "Datetime", "type": "temporal"}, "y": {"axis": {"titleAngle": 0, "titlePadding": 20}, "field": "low", "scale": {"zero": false}, "title": "SPY", "type": "quantitative"}, "y2": {"field": "high"}}}, {"mark": {"type": "bar", "size": 10}, "encoding": {"color": {"condition": {"test": "datum.open <= datum.close", "value": "#06982d"}, "value": "#ae1325"}, "tooltip": [{"field": "close", "format": ",.3f", "type": "quantitative"}, {"field": "open", "format": ",.3f", "type": "quantitative"}, {"field": "low", "format": ",.3f", "type": "quantitative"}, {"field": "high", "format": ",.3f", "type": "quantitative"}], "x": {"axis": {"format": "%H:%M", "labelAngle": -80}, "field": "Datetime", "title": "Datetime", "type": "temporal"}, "y": {"field": "open", "type": "quantitative"}, "y2": {"field": "close"}}}], "data": {"name": "data-2668d7a3e21855167fa538c864552d17"}, "height": 300, "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json", "datasets": {"data-2668d7a3e21855167fa538c864552d17": [{"Datetime": "2024-05-29T09:30:00-04:00", "open": 525.6799926757812, "close": 525.5150146484375, "low": 525.4249877929688, "high": 526.02001953125, "return": -0.16497802734375}, {"Datetime": "2024-05-29T09:45:00-04:00", "open": 525.510009765625, "close": 526.2000122070312, "low": 525.3699951171875, "high": 526.4199829101562, "return": 0.69000244140625}, {"Datetime": "2024-05-29T10:00:00-04:00", "open": 526.2050170898438, "close": 526.4000244140625, "low": 526.010009765625, "high": 526.543701171875, "return": 0.19500732421875}, {"Datetime": "2024-05-29T10:15:00-04:00", "open": 526.4249877929688, "close": 526.72998046875, "low": 525.8599853515625, "high": 526.969970703125, "return": 0.30499267578125}, {"Datetime": "2024-05-29T10:30:00-04:00", "open": 526.7559814453125, "close": 526.9299926757812, "low": 526.7559814453125, "high": 527.3049926757812, "return": 0.17401123046875}, {"Datetime": "2024-05-29T10:45:00-04:00", "open": 526.8300170898438, "close": 527.030029296875, "low": 526.7000122070312, "high": 527.22998046875, "return": 0.20001220703125}, {"Datetime": "2024-05-29T11:00:00-04:00", "open": 527.02001953125, "close": 526.1500244140625, "low": 526.0599975585938, "high": 527.0700073242188, "return": -0.8699951171875}, {"Datetime": "2024-05-29T11:15:00-04:00", "open": 526.1599731445312, "close": 526.47998046875, "low": 526.030029296875, "high": 526.7150268554688, "return": 0.32000732421875}, {"Datetime": "2024-05-29T11:30:00-04:00", "open": 526.47998046875, "close": 526.4600219726562, "low": 526.1510009765625, "high": 526.6699829101562, "return": -0.01995849609375}, {"Datetime": "2024-05-29T11:45:00-04:00", "open": 526.4500122070312, "close": 526.5999755859375, "low": 526.1699829101562, "high": 526.7249755859375, "return": 0.14996337890625}, {"Datetime": "2024-05-29T12:00:00-04:00", "open": 526.6099853515625, "close": 526.0349731445312, "low": 526.010009765625, "high": 526.6099853515625, "return": -0.57501220703125}, {"Datetime": "2024-05-29T12:15:00-04:00", "open": 526.030029296875, "close": 526.8200073242188, "low": 525.97998046875, "high": 526.9199829101562, "return": 0.78997802734375}, {"Datetime": "2024-05-29T12:30:00-04:00", "open": 526.8200073242188, "close": 526.780029296875, "low": 526.6199951171875, "high": 527.1649780273438, "return": -0.03997802734375}, {"Datetime": "2024-05-29T12:45:00-04:00", "open": 526.77001953125, "close": 527.0999145507812, "low": 526.760009765625, "high": 527.3099975585938, "return": 0.32989501953125}, {"Datetime": "2024-05-29T13:00:00-04:00", "open": 527.0999755859375, "close": 526.489990234375, "low": 526.3800048828125, "high": 527.17041015625, "return": -0.6099853515625}, {"Datetime": "2024-05-29T13:15:00-04:00", "open": 526.4589233398438, "close": 526.9301147460938, "low": 526.3400268554688, "high": 526.9600219726562, "return": 0.47119140625}, {"Datetime": "2024-05-29T13:30:00-04:00", "open": 526.9299926757812, "close": 526.3150024414062, "low": 526.1699829101562, "high": 526.9299926757812, "return": -0.614990234375}, {"Datetime": "2024-05-29T13:45:00-04:00", "open": 526.3200073242188, "close": 527.010009765625, "low": 526.25, "high": 527.2000122070312, "return": 0.69000244140625}, {"Datetime": "2024-05-29T14:00:00-04:00", "open": 527.030029296875, "close": 526.969970703125, "low": 526.780029296875, "high": 527.1400146484375, "return": -0.06005859375}, {"Datetime": "2024-05-29T14:15:00-04:00", "open": 526.9650268554688, "close": 526.5900268554688, "low": 526.5900268554688, "high": 526.9849853515625, "return": -0.375}, {"Datetime": "2024-05-29T14:30:00-04:00", "open": 526.5800170898438, "close": 526.5798950195312, "low": 526.219970703125, "high": 526.8099975585938, "return": -0.0001220703125}, {"Datetime": "2024-05-29T14:45:00-04:00", "open": 526.5700073242188, "close": 526.1649780273438, "low": 526.0499877929688, "high": 526.5750122070312, "return": -0.405029296875}, {"Datetime": "2024-05-29T15:00:00-04:00", "open": 526.1649780273438, "close": 526.4600219726562, "low": 526.010009765625, "high": 526.5, "return": 0.2950439453125}, {"Datetime": "2024-05-29T15:15:00-04:00", "open": 526.469970703125, "close": 526.8599853515625, "low": 526.3400268554688, "high": 527.1900024414062, "return": 0.3900146484375}, {"Datetime": "2024-05-29T15:30:00-04:00", "open": 526.8499755859375, "close": 526.7050170898438, "low": 526.5399780273438, "high": 527.1900024414062, "return": -0.14495849609375}, {"Datetime": "2024-05-29T15:45:00-04:00", "open": 526.7000122070312, "close": 526.1099853515625, "low": 525.5599975585938, "high": 526.8099975585938, "return": -0.59002685546875}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
